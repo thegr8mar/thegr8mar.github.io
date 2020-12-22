@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Welcome</title>
+	<link rel="icon" href="fv.jpg" type="image/gif" sizes="16x16">
+	<a href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip">
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: times new roman;
+  padding: 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.card {
+  background-color: none;
+  padding: 20px;
+  margin-top: 250px;
+}
+
+.myButton {
+	box-shadow:inset 4px 5px 8px 2px #efdcfb;
+	background:linear-gradient(to bottom, pink 5%, pink 100%);
+	background-color:pink;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Georgia;
+	font-size:28px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #e671c9;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e671c9 5%, #e671c9 100%);
+	background-color: #e671c9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
 </head>
 <body>
-	<center>
-	<h1>Hello World</h1>
-	<p>This is my first website</p>
-	</center>
+	<div class="card">
+		<center>
+			<a class="myButton" href="../assignment_CSC318/assignment.html">Hi, please click me !</a>
+		</center>
+	</div>
 </body>
 </html>
