@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<link rel="icon" href="fv.jpg" type="image/gif" sizes="16x16">
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: times new roman;
+  padding: 150px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.card {
+  background-color: none;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.button {
+	box-shadow:inset -30px 3px 25px 8px #d9b6d0;
+	background-color:transparent;
+	border-radius:10px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:5px 13px;
+	text-decoration:none;
+	text-shadow:-1px 1px 7px #c70067;
+}
+.button:hover {
+	background-color:transparent;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+			<center>
+	    	<div id="result">
+		    	<table border="1px" style="border-color: pink;">
+		    		<h3>Result Semester 1 - Semester 4</h3>
+				    	<thead>
+				    		<tr>
+				    			<th>Semester</th>
+				    			<th>CGPA</th>
+				    		</tr>
+				    	</thead>
+				    	<tbody>
+				    		<tr>
+						    	<td><input type="radio" id="sem1" name="result" value="2.83">Semester 1 </td>
+						    	<td rowspan="4" id="x"></td>
+						    </tr>
+						    <tr>
+						    	<td><input type="radio" id="sem2" name="result" value="3.22">Semester 2 </td>
+						    </tr>
+						    <tr>
+						    	<td><input type="radio" id="sem3" name="result" value="3.31">Semester 3 </td>
+						    </tr>
+						    <tr>
+						    	<td><input type="radio" id="sem4" name="result" value="3.78">Semester 4 </td>
+						    </tr>
+				    	</tbody>
+		    	</table>
+	    	</div><br>
+	    	<div>
+	    	<button class="button" onclick="window.location.href='../assignment_CSC318/assignment.html'">Back</button>
+	    	<button id="check" class="button" onclick="run()">Check</button>
+	    	</div>
+	    	<script> 
+		        function run() {  
+		            var xx = document.getElementById('result').value;
+					var oo;
+					if(document.getElementById('sem1').checked){
+					    oo = document.getElementById('sem1').value;
+					    
+					}else if(document.getElementById('sem2').checked){
+					    oo = document.getElementById('sem2').value;
+					    
+					}else if(document.getElementById('sem3').checked){
+					    oo = document.getElementById('sem3').value;
+					}  
+					else{
+						oo = document.getElementById('sem4').value;
+					}
+
+					document.getElementById('x').innerHTML = "Result is: " + oo; 
+		        } 
+	    	</script>
+	    </center>
+	    </div>
+</body>
+</html>

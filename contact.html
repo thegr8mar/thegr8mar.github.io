@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<link rel="icon" href="fv.jpg" type="image/gif" sizes="16x16">
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: times new roman;
+  padding: 200px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.card {
+  background-color: none;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.button {
+	box-shadow:inset -30px 3px 25px 8px #d9b6d0;
+	background-color:transparent;
+	border-radius:10px;
+	border:1px solid #ee1eb5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:5px 13px;
+	text-decoration:none;
+	text-shadow:-1px 1px 7px #c70067;
+}
+.button:hover {
+	background-color:transparent;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+</head>
+<body>
+<div class="card">
+	    	<div>
+	    		<center>
+	    		<h3>Contact Me</h3>
+	    		<select id="contact">
+	    			<option value="Please select">--select--</option>
+	    			<option value="sitimariamismail.531@gmail.com">Email</option>
+	    			<option value="016-9253953">Call / Message</option>
+	    		</select><br><br>
+	    		<button class="button" onclick="window.location.href='../assignment_CSC318/assignment.html'">Back</button>
+	    		<button type="button" class="button" onclick="go()">Go</button>
+	    		<i><p id="t"></p></i>
+	    		<script type="text/javascript">
+	    			function go() {
+	    				var a = document.getElementById('contact');
+	    				var b = a.options[a.selectedIndex].value;
+
+	    				document.getElementById('t').innerHTML = "Contact: " + b;
+	    			}
+	    		</script>
+	    		</center>
+	    	</div>
+	    </div>
+</body>
+</html>
